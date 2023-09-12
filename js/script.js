@@ -22,14 +22,11 @@ for(let i= 0; i < emailsAdded.length; i++){
     if(!emailWrong){
     emailsAdded.push(emailUser)
     message = 'Benvenuto!'
+    const btnDice = document.getElementById('btn-dice')
+    btnDice.addEventListener('click', function(){
+        const userDice = Math.floor((Math.random() * 6) + 1);
+        const pcDice = Math.floor((Math.random() * 6) + 1);
+    })
     }
 
     document.getElementById('output').innerHTML = message
-
-// DICES'S GAME
-const btnDice = document.getElementById('btn-dice')
-
-btnDice.addEventListener('click' function()){
-    const userDice = Math.floor((Math.random() * 6) + 1)
-    const pcDice = Math.floor((Math.random() * 6) +)
-}
