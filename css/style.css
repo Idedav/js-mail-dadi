@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(71, 126, 255);
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.dc-container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#btn-dice{
+    background-color: rgb(122, 7, 7);
+    padding: 10px;
+    font-weight: bold;
+}
+
+span{
+    font-size: 3rem;
+}

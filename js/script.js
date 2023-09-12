@@ -15,7 +15,7 @@ for(let i= 0; i < emailsAdded.length; i++){
 
     if(email === emailUser){
         emailRight = true
-        messageEmail = 'Benvenuto!'
+        messageEmail = 'Benvenuto in Craps!'
     // DICES'S GAME
         const btnDice = document.getElementById('btn-dice')
         btnDice.addEventListener('click', function(){
@@ -23,17 +23,55 @@ for(let i= 0; i < emailsAdded.length; i++){
             const userDice = Math.floor((Math.random() * 6) + 1);
             const pcDice = Math.floor((Math.random() * 6) + 1);
             let messageDice;
-            console.log(userDice, pcDice)
     // NUMBERS CONTROL
             if(userDice > pcDice){
-                console.log('Hai vinto')
-                messageDice = 'Ti è uscito ' + userDice + ' e al pc è uscito ' + pcDice + ' Hai vinto!'
+                messageDice = `
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Il tuo dado:</h2>
+                        <span>${userDice}</span>
+                    </div>
+                    <div class="col-6">
+                        <h2>Il dado del PC:</h2>
+                        <span>${pcDice}</span>
+                    </div>
+                    <div class="col-12 my-5">
+                        <h2>Hai vinto!</h2>
+                    </div>
+                </div
+                `
             }else if(userDice < pcDice){
-                console.log('Hai perso')
-                messageDice = 'Ti è uscito ' + userDice + ' e al pc è uscito ' + pcDice + ' Hai perso...'
+                messageDice = `
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Il tuo dado:</h2>
+                        <span>${userDice}</span>
+                    </div>
+                    <div class="col-6">
+                        <h2>Il dado del PC:</h2>
+                        <span>${pcDice}</span>
+                    </div>
+                    <div class="col-12 my-5">
+                        <h2>Hai perso...</h2>
+                    </div>
+                </div
+                `
             }else{
-                console.log('pareggio')
-                messageDice = 'Ti è uscito ' + userDice + ' e al pc è uscito ' + pcDice + ' Hai pareggiato.'
+                messageDice = `
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Il tuo dado:</h2>
+                        <span>${userDice}</span>
+                    </div>
+                    <div class="col-6">
+                        <h2>Il dado del PC:</h2>
+                        <span>${pcDice}</span>
+                    </div>
+                    <div class="col-12 my-5">
+                        <h2>Hai pareggiato.</h2>
+                    </div>
+                </div
+                `
             }
     // RESULT MEESSAGE
             document.getElementById('output-dice').innerHTML = messageDice
