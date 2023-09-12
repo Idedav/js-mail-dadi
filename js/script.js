@@ -1,3 +1,4 @@
+// EMAIL
 const emailsAdded = [
     'aldo.baglio@gmail.com',
     'giovanni.storti@gmail.com',
@@ -7,7 +8,7 @@ const emailsAdded = [
 const emailUser = prompt('Inserisci la tua email per la registrazione al gioco.')
 let emailWrong = false
 let message;
-
+// EMAIL'S CONTROL
 for(let i= 0; i < emailsAdded.length; i++){
     const email = emailsAdded[i];
 
@@ -20,12 +21,15 @@ for(let i= 0; i < emailsAdded.length; i++){
 }
     if(!emailWrong){
     emailsAdded.push(emailUser)
-    console.log(emailsAdded)
     message = 'Benvenuto!'
     }
 
     document.getElementById('output').innerHTML = message
 
+// DICES'S GAME
+const btnDice = document.getElementById('btn-dice')
 
-
-
+btnDice.addEventListener('click' function()){
+    const userDice = Math.floor((Math.random() * 6) + 1)
+    const pcDice = Math.floor((Math.random() * 6) +)
+}
