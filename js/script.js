@@ -22,10 +22,21 @@ for(let i= 0; i < emailsAdded.length; i++){
     if(!emailWrong){
     emailsAdded.push(emailUser)
     message = 'Benvenuto!'
+// DICES'S GAME
     const btnDice = document.getElementById('btn-dice')
     btnDice.addEventListener('click', function(){
+// NUMBERS GENERATOR
         const userDice = Math.floor((Math.random() * 6) + 1);
         const pcDice = Math.floor((Math.random() * 6) + 1);
+        console.log(userDice, pcDice)
+// NUMBERS CONTROL
+        if(userDice > pcDice){
+            console.log('Hai vinto')
+        }else if(userDice < pcDice){
+            console.log('Hai perso')
+        }else if(userDice == pcDice){
+            console.log('pareggio')
+        }
     })
     }
 
