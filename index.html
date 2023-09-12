@@ -12,10 +12,12 @@
 </head>
 <body>
     
-    <div class="container my-5 text-center dc-container">
-        <label for="">Inserisci la tua email per accedere al gioco</label>
-        <input type="email" id="input-email">
-        <button id="btn-email" class="btn btn-primary">Accedi</button>
+    <div class="container my-5 text-center dc-container d-flex flex-column align-items-center">
+        <div class="email-access d-flex flex-column align-items-center">
+            <label for="">Inserisci la tua email per accedere al gioco</label>
+            <input type="email" id="input-email" class="my-3">
+            <button id="btn-email" class="btn btn-primary my-3">Accedi</button>
+        </div>
         <h1 id="output-email"></h1>
 
         <div id="dices-game" class="d-none">
