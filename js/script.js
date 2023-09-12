@@ -5,15 +5,16 @@ const emailsAdded = [
     'giacomo.poretti@gmail.com',
     'ajeje.brazorf@gmail.com'
 ]
-const emailUser = prompt('Inserisci la tua email per la registrazione al gioco.')
-let emailWrong = false
+const emailUser = prompt('Inserisci la tua email per accedere al gioco')
+const dicesGame = document.getElementById('dices-game')
+let emailRight = false
 let messageEmail;
 // EMAIL'S CONTROL
 for(let i= 0; i < emailsAdded.length; i++){
     const email = emailsAdded[i];
 
     if(email === emailUser){
-        emailWrong = true
+        emailRight = true
         messageEmail = 'Benvenuto!'
     // DICES'S GAME
         const btnDice = document.getElementById('btn-dice')
@@ -41,8 +42,9 @@ for(let i= 0; i < emailsAdded.length; i++){
 
 }
 
-if(!emailWrong){
+if(!emailRight){
     messageEmail = 'Utente non trovato'
+    dicesGame.classList.add('d-none')
 }
    
     document.getElementById('output-email').innerHTML = messageEmail
